@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Election
 {
@@ -6,7 +8,15 @@ namespace Election
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // string numCan = Console.ReadLine();
+
+            var cans = new Dictionary<string, string>(){
+                {"Marilyn Manson", "Rhinoceros"},
+                {"Jane Doe", "Family Coalition"},
+                {"John Smith", "independent"}
+            };
+
+            Console.WriteLine(cans["Marilyn Manson"]);
         }
     }
 }
