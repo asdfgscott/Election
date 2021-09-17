@@ -26,7 +26,7 @@ namespace Election
                 cans.Add(Console.ReadLine(),Console.ReadLine());
             }
             
-
+            Console.WriteLine("We have " + cans.Count + " cans");
 
             int voteNum = Int32.Parse(Console.ReadLine());
 
