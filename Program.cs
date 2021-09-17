@@ -16,9 +16,9 @@ namespace Election
             //     {"Jane Doe", "Family Coalition"},
             //     {"John Smith", "independent"}
             // };
-
+        
             var cans = new Dictionary<string, string>();
-            var votes = new Dictionary<Int32, string>();
+            var votes = new Dictionary<string, Int32>();
 
             int x = Int32.Parse(Console.ReadLine());
 
@@ -31,12 +31,22 @@ namespace Election
             int voteNum = Int32.Parse(Console.ReadLine());
 
             for(int i = 0; i < voteNum; i++){
-                votes.Add(i,Console.ReadLine());
+
+                string vote = Console.ReadLine();
+
+                if(votes.ContainsKey(vote)){
+                    votes[vote] += 1;
+                    Console.WriteLine("In here");
+                }
+                else{
+                    Console.WriteLine("Not here");
+                    votes.Add(vote,1);
+
+                }
                 
-                Console.WriteLine(votes[i]);
             }
-
-
+            Console.WriteLine("Scott has " + votes["Scott"] + " votes");
+            Console.WriteLine("Kim has " + votes["Kim"] + " votes");
         }
     }
 }
