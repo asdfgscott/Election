@@ -47,6 +47,9 @@ namespace Election
             }
             Console.WriteLine("Scott has " + votes["Scott"] + " votes");
             Console.WriteLine("Kim has " + votes["Kim"] + " votes");
+
+            var maxVal = votes.Values.Max();
+            Console.WriteLine(maxVal);
         }
     }
 }
